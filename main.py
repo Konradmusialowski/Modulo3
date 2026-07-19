@@ -4,8 +4,6 @@ import requests
 
 st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 
-# Força a largura para 100% e evita que ele fique contido no layout padrão
-components.html( height=1200, scrolling=True)
 
 # 1. Busca os dados lá do GitHub
 url = "https://raw.githubusercontent.com/Konradmusialowski/Modulo3/main/data/produtos.json"
@@ -18,4 +16,7 @@ html_template = """
 """
 
 # 3. Renderiza no Streamlit
-components.html(html_template, height=1000, scrolling=True)
+
+
+# Força a largura para 100% e evita que ele fique contido no layout padrão
+components.html(html_template, height=1200, scrolling=True)
