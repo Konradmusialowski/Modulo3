@@ -2,6 +2,11 @@ import streamlit as st
 import streamlit.components.v1 as components
 import requests
 
+st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
+
+# Força a largura para 100% e evita que ele fique contido no layout padrão
+components.html(html_template, height=1200, scrolling=True)
+
 # 1. Busca os dados lá do GitHub
 url = "https://raw.githubusercontent.com/Konradmusialowski/Modulo3/main/data/produtos.json"
 dados = requests.get(url).json()
